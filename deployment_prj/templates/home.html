@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Operations Dashboard</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/temp.css') }}">
+	</head>
+	<body style="font-family:Arial;" bgcolor="#DCDCDC">
+    <div class="header">
+	<a href="{{url_for('deployment_ui.browse')}}">Home</a>
+	{% if current_user.is_authenticated %}
+	<a href="/account">Account</a>
+	<a href="/logout">Log Out</a>
+	{% endif %}
+	<a href="/about">About</a>
+	<img class="stc-logo" src={{url_for('static',filename='logo/stc_logo.png')}} alt="STC logo" width="130" height="50">
+	</div>
+	<div class="main">
+    		{% block content %}
+    		{% endblock %}
+	</div>
+	</body>
+</html>

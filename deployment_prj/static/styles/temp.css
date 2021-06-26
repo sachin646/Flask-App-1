@@ -1,0 +1,129 @@
+body{
+ margin:0 auto;
+ padding:0px;
+ background-color: #F5F5F5;
+ color: #4B0082;
+}
+.header{
+  display:inline-block;
+  background-color: #DCDCDC;
+  width: 100%;
+  border-bottom-style: solid;
+  border-color: #4B0082;
+  border-width: 1px;
+}
+.header a {
+  float: left;
+  color: #4B0082;
+  text-align: center;
+  padding: 20px 12px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.header a:hover {
+  background-color: #4B0082;
+  color: #FFFFFF;
+}
+.stc-logo {
+  display:inline-block;
+  margin-top: 5px;
+  float: right;
+}
+.main {
+  float: left;
+  width: 66%;
+  padding: 0 20px;
+  margin-left: 210px;
+}
+.main a {
+  text-decoration: none;
+}
+.run {
+  color: #4CAF50;
+  background-color: white; 
+  border: 2px solid #4CAF50;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+}
+.run:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+table {
+  width: 50%;
+}
+table, td, th {
+  text-decoration: none;
+}
+.form-box {
+  margin: auto;
+  border-radius: 6px;
+  background-color: white;
+  text-align: center;
+  margin-top: 50px;
+  height: 50%;
+  width: 35%;
+  padding: 100px 50px;
+  box-shadow: #808080 0px 4px 12px;
+}
+
+input {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;	
+  border: none;
+  border-bottom: 1px solid #4B0082;
+  color: #4B0082;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  outline: none;
+}
+
+input[type=text]:focus::-webkit-input-placeholder, input[type=password]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input[type=submit] {
+  border-radius: 6px;
+  width: 30%;
+  border-style: solid;
+  border-color: #4B0082;
+  border-width: 1px;
+  color: #4B0082;
+  background-color: white;
+}
+
+input[type=submit]:hover {
+  background-color: #4B0082;
+  color: white;
+}
+
+.browser {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+.browser th,td {
+  padding: 8px;
+  border-style: solid;
+  border-color: #ddd;
+  border-width: 1px;
+}
+
+.browser th {
+  background-color: #DCDCDC;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  font-style: italic;
+}

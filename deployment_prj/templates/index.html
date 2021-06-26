@@ -1,0 +1,21 @@
+{% extends "home.html" %}
+{% block content %}
+<div class="form-box">
+<form method="POST">
+	{{form.hidden_tag()}}
+	<h2>Sign in to your account</h2>
+	{{form.user_name.label}}{{form.user_name(placeholder="Email ID")}}<br>
+	{{form.password.label}}{{form.password(placeholder="Password")}}<br><br>
+	<span class="error">
+		{% with messages = get_flashed_messages() %}  
+		{% if messages %}  
+		{% for message in messages %}
+		{{ message }}
+		{% endfor %}
+		{% endif %}
+		{% endwith %}
+	</span><br>
+	<br>{{form.submit()}}<br>
+</form>
+</div>
+{% endblock %}

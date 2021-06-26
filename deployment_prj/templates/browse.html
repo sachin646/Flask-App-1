@@ -1,0 +1,20 @@
+{% extends "home.html"%}
+{% block content %}
+	{% if alert %}
+	<p class="script-alert">{{alert}}</p>
+ 	{% else %}
+	<p>Current Directory : {{request.path}}</p>
+	<table class="browser">
+	<tr><th>File</th><th>Action</th></tr>
+	{% for file in file_list %}
+	{% if '.sh' in file %}
+		<tr><td>{{file}}</td><td><a class="run" href={{(request.path + '/' if request.path != '/' else '') + file+'/run'}}>Run</a></td></tr>
+ 	{% else %}
+	<tr><td><a href="{{ (request.path + '/' if request.path != '/' else '') + file }}">
+		{{file}}
+	</a></td><td>NA</td></tr>
+	{% endif %}
+    	{% endfor %}
+	</table>
+	{% endif %}
+{% endblock %}
