@@ -1,1 +1,1 @@
-This is project for STC deployment
+This is project for STC deployment.
