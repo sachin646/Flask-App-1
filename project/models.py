@@ -25,6 +25,6 @@ class User(UserMixin):
 
 # Initialize USERS
 USERS = {
-            "admin@stc.com.sa" : ("admin@stc.com.sa", "admin1234!"),
-            "sachin@stc.com.sa" : ("sachin@stc.com.sa", "sachin1234$")
+            "admin@abc.com" : ("admin@abc.com", "admin1234!"),
+            "sachin@abc.com" : ("sachin@abc.com", "sachin1234$")
         }

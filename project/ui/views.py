@@ -4,10 +4,10 @@ from flask import render_template,Blueprint, send_file
 from flask_login import login_required, current_user
 
 
-deployment_ui = Blueprint('deployment_ui',__name__)
+ui = Blueprint('ui',__name__)
 
-@deployment_ui.route('/', defaults={'base_path': ''})
-@deployment_ui.route('/<path:base_path>')
+@ui.route('/', defaults={'base_path': ''})
+@ui.route('/<path:base_path>')
 @login_required
 def browse(base_path):
     # Set Home Directory
@@ -28,8 +28,8 @@ def browse(base_path):
     file_list = os.listdir(full_path)
     return render_template('browse.html', file_list=file_list)
 
-@deployment_ui.route('/', defaults={'base_path': ''})
-@deployment_ui.route('/<path:base_path>/run')
+@ui.route('/', defaults={'base_path': ''})
+@ui.route('/<path:base_path>/run')
 def run_script(base_path):
     # Set Home Directory
     HOME_DIR = '/home/sachin/Flask'

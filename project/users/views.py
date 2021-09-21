@@ -1,7 +1,7 @@
-from deployment_prj import login_manager
+from project import login_manager
 from flask import render_template, Blueprint, redirect, url_for
 from flask_login import login_user, current_user, login_required, logout_user
-from deployment_prj.models import User
+from project.models import User
 
 
 users = Blueprint('users',__name__)

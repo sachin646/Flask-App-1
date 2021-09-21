@@ -1,8 +1,8 @@
 from flask import render_template, url_for, request, Blueprint
 from flask import render_template,url_for,flash,redirect,request,Blueprint
 from flask_login import login_user, current_user, logout_user, login_required
-from deployment_prj.core.forms import LoginForm
-from deployment_prj.models import User
+from project.core.forms import LoginForm
+from project.models import User
 
 core = Blueprint('core',__name__)
 
@@ -26,7 +26,7 @@ def login():
                 next = request.args.get('next')
                 
                 if next == None or not next[0]=='/':
-                    next = url_for('deployment_ui.browse')
+                    next = url_for('ui.browse')
 #                print(current_user.is_authenticated)
                 return redirect(next)
             else:
